@@ -1,0 +1,161 @@
+/*******************************
+
+    General Styles
+
+*******************************/
+
+html, body{
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+    background: #292929;
+}
+
+.to-center{
+    display: block;
+    text-align: center;
+}
+
+.to-center.both{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*******************************
+
+    Select Form (with NoJS)
+
+*******************************/
+
+form select{
+    position: relative;
+    
+    padding: 10px;
+    
+    border-radius: 5px;
+    
+    font-size: 0.7rem;
+    
+    color: white;
+    background: #1eb98f;
+    
+    -webkit-appearance:none; 
+    -moz-appearance:none; 
+    appearance:none;
+}
+
+/*******************************
+
+    Select Form (with JS)
+
+*******************************/
+
+form .wrapper-dropdown {
+    position: relative;
+    width: 80px;
+    
+    padding: 15px 40px 15px 15px;
+
+    background: #fff;
+    border-radius: 5px;
+    
+    cursor: pointer;
+    outline: none;
+
+    font-size: 0.7rem;
+    
+    color: white;
+    background: #1eb98f;
+    
+    text-align: left;
+}
+
+.wrapper-dropdown:after {
+    content: "";
+    
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    
+    width: 0;
+    height: 0;
+
+    margin-top: -3px;
+    
+    border-width: 6px 6px 0 6px;
+    border-style: solid;
+    border-color: #0c8c69 transparent;
+}
+
+.wrapper-dropdown .dropdown {
+    position: absolute;
+    top: 140%;
+    left: 0;
+    right: 0;
+
+    background: #1eb98f;
+    border-radius: 5px;
+    transition: all 0.5s ease-in;
+    list-style: none;
+
+    /* Hiding */
+    opacity: 0;
+    pointer-events: none;
+}
+
+.wrapper-dropdown ul{
+    padding: 0px;
+    overflow: hidden;
+}
+
+.wrapper-dropdown .dropdown li{
+    display: block;
+    
+    padding: 15px;
+}
+
+.wrapper-dropdown .dropdown li:hover{
+    background: #1fa582;
+}
+
+.wrapper-dropdown.active .dropdown {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*******************************
+
+    Icon classes
+
+*******************************/
+
+.user-icon{
+    background-image: url('../images/user.png') !important;
+    background-repeat: no-repeat !important;
+    background-position: 15px center!important;
+    padding-left: 40px !important;
+}
+
+.settings-icon{
+    background-image: url('../images/note.png') !important;
+    background-repeat: no-repeat !important;
+    background-position: 15px center!important;
+    padding-left: 40px !important;
+}
+
+.padlock-icon{
+    background-image: url('../images/padlock.png') !important;
+    background-repeat: no-repeat !important;
+    background-position: 15px center!important;
+    padding-left: 40px !important;
+}
+
+.close-icon{
+    background-image: url('../images/close.png') !important;
+    background-repeat: no-repeat !important;
+    background-position: 15px center!important;
+    padding-left: 40px !important;
+}
